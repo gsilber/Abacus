@@ -32,15 +32,15 @@
     </ng-template>
     </svg>
     <svg:svg width='100%' height='20%' viewBox='0 0 1000 200' >
-      <svg:rect x='70' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2'></svg:rect>
-      <svg:rect x='170' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2'></svg:rect>
-      <svg:rect x='270' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2'></svg:rect>
-      <svg:rect x='370' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2'></svg:rect>
-      <svg:rect x='470' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2'></svg:rect>
-      <svg:rect x='570' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2'></svg:rect>
-      <svg:rect x='670' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2'></svg:rect>
-      <svg:rect x='770' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2'></svg:rect>
-      <svg:rect x='870' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2'></svg:rect>
+      <svg:rect x='70' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2' [ngClass]='{warn: columnValue(0)>9}'></svg:rect>
+      <svg:rect x='170' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2'  [ngClass]='{warn: columnValue(1)>9}'></svg:rect>
+      <svg:rect x='270' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2'  [ngClass]='{warn: columnValue(2)>9}'></svg:rect>
+      <svg:rect x='370' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2' [ngClass]='{warn: columnValue(3)>9}'></svg:rect>
+      <svg:rect x='470' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2' [ngClass]='{warn: columnValue(4)>9}'></svg:rect>
+      <svg:rect x='570' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2' [ngClass]='{warn: columnValue(5)>9}'></svg:rect>
+      <svg:rect x='670' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2' [ngClass]='{warn: columnValue(6)>9}'></svg:rect>
+      <svg:rect x='770' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2' [ngClass]='{warn: columnValue(7)>9}'></svg:rect>
+      <svg:rect x='870' y='10' width='60' height='60' fill='none' stroke='blue' stroke-width='2' [ngClass]='{warn: columnValue(8)>9}'></svg:rect>
       
       <svg:text x='100' y='40'  dy='10px' text-anchor='middle' style='font:bold 30px sans-serif;'>{{columnValue(0)}}</svg:text>
       <svg:text x='200' y='40' dy='10px' text-anchor='middle' style='font:bold 30px sans-serif;'>{{columnValue(1)}}</svg:text>
@@ -51,7 +51,7 @@
       <svg:text x='700' y='40' dy='10px' text-anchor='middle' style='font:bold 30px sans-serif;'>{{columnValue(6)}}</svg:text>
       <svg:text x='800' y='40' dy='10px' text-anchor='middle' style='font:bold 30px sans-serif;'>{{columnValue(7)}}</svg:text>
       <svg:text x='900' y='40' dy='10px' text-anchor='middle' style='font:bold 30px sans-serif;'>{{columnValue(8)}}</svg:text>
-      <svg:rect x='400' y='100' width='200' height='50'  stroke='black' stroke-width='4' fill='none'></svg:rect>
+      <svg:rect x='400' y='100' width='200' height='50'  stroke='black' stroke-width='4' fill='none' ></svg:rect>
       <svg:text x='500' y='125'  dy='10px' text-anchor='middle' style='font:bold 30px sans-serif;'>{{abacusValue}}</svg:text>
     </svg:svg>   
 </div>
