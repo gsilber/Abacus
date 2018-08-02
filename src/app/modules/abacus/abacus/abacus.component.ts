@@ -42,18 +42,36 @@ export class AbacusComponent implements OnInit {
       balls = this.topBalls;
     }
     const ballCount = balls[0].length;
-    if (balls[column][position]) {
-      // want to click down
-      for (let i = 0; i < ballCount; i++) {
-        if (i < position && balls[column][i]) {
-          return;
+    if (!top) {
+      if (balls[column][position]) {
+        // want to click down
+        for (let i = 0; i < ballCount; i++) {
+          if (i < position && balls[column][i]) {
+            return;
+          }
+        }
+      } else {
+        // Want to click up
+        for (let i = ballCount - 1; i >= 0; i--) {
+          if (i > position && !balls[column][i]) {
+            return;
+          }
         }
       }
     } else {
-      // Want to click up
-      for (let i = ballCount - 1; i >= 0; i--) {
-        if (i > position && !balls[column][i]) {
-          return;
+      if (!balls[column][position]) {
+        // want to click down
+        for (let i = 0; i < ballCount; i++) {
+          if (i < position && !balls[column][i]) {
+            return;
+          }
+        }
+      } else {
+        // Want to click up
+        for (let i = ballCount - 1; i >= 0; i--) {
+          if (i > position && balls[column][i]) {
+            return;
+          }
         }
       }
     }
